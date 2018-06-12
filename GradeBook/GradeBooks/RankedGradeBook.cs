@@ -26,11 +26,11 @@ namespace GradeBook.GradeBooks
 
             if (grades[gradingStep-1]<=averageGrade)
                 return 'A';
-            else if (grades[(gradingStep - 1)*2] <= averageGrade)
+            else if (grades[(gradingStep * 2) - 1] <= averageGrade)
                 return 'B';
-            else if (grades[(gradingStep - 1)* 3] <= averageGrade)
+            else if (grades[(gradingStep * 3) - 1] <= averageGrade)
                 return 'C';
-            else if (grades[(gradingStep - 1)* 4] <= averageGrade)
+            else if (grades[(gradingStep * 4) - 1] <= averageGrade)
                 return 'D';
             else
                 return 'F';
