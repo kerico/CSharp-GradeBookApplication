@@ -35,5 +35,21 @@ namespace GradeBook.GradeBooks
             else
                 return 'F';
         }
+        public override void CalculateStatistics()
+        {
+            if (Students.Count<5)
+            {
+                throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
+            }
+            else
+            base.CalculateStatistics();
+        }
+        public override void CalculateStudentStatistics(string name)
+        {
+            if (Students.Count < 5)
+                throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work");
+            else
+                base.CalculateStudentStatistics(name);
+        }
     }
 }
